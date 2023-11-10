@@ -54,11 +54,14 @@ You can access the live API at [https://finkli.pythonanywhere.com/](https://fink
         </li>
     </ul>
     <h3>Response Format</h3>
-    <pre>{"health_tip": string}</pre>
+    <pre>{"health_tip": "health tip string"}</pre>
     <h3>Error Response for invalid endpoint</h3>
     Status: 404
-    <pre>{"error": string}</pre>
+    <pre>{"error": "error message string"}</pre>
 </ul>
+
+## UML Diagram
+![UML Diagram](uml.png)
     
 ## Installation
 1. **Clone the Repository:**
@@ -86,4 +89,3 @@ You can access the live API at [https://finkli.pythonanywhere.com/](https://fink
     ```
 3. **Access the API:**
    - Open your browser and go to: http://localhost:5000/
-   - Or use tools like curl or Postman for API testing.
