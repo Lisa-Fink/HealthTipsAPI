@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route("/mood/<string:mood>")
 def mood(mood):
     if mood == "stormy" or mood == "anxiety":
-        return {"health_tip": mood_responses["stormy"]}
+        return {"health_tip": mood_responses[mood]}
     else:
         # the mood is invalid return 404 status
         return {"error": "Mood not found"}, 404
