@@ -1,8 +1,11 @@
-from flask import Flask
+from flask import Flask, render_template
 from responses import *
 
 app = Flask(__name__)
 
+@app.route("/")
+def main():
+    return render_template("index.html")
 
 @app.route("/mood/<string:mood>")
 def mood(mood):
