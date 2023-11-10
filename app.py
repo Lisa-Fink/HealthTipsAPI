@@ -28,7 +28,7 @@ def working_out_time(change):
         # the working out time change is invalid return 404 status
         return {"error": "Working out time change not found"}, 404
     
-@app.route("/pysical-activity/<string:change>")
+@app.route("/physical-activity/<string:change>")
 def physical_activity(change):
     if change == "decrease":
         return {"health_tip": physical_activity_responses[change]}
