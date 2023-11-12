@@ -53,12 +53,38 @@ You can access the live API at [https://finkli.pythonanywhere.com/](https://fink
         <li>GET: <a href="https://finkli.pythonanywhere.com/sleep-time/reduce">/sleep-time/reduce</a>
         </li>
     </ul>
-    <h3>Response Format</h3>
-    <pre>{"health_tip": "health tip string"}</pre>
-    <h3>Error Response for invalid endpoint</h3>
-    Status: 404
-    <pre>{"error": "error message string"}</pre>
 </ul>
+    <h3>Response Format</h3>
+    <pre>
+HTTP/1.1 200 OK
+Content-Type: application/json
+{
+  "health_tip": "health tip string"
+}
+    </pre>
+    <h3>Error Response for invalid endpoint</h3>
+    <pre>
+HTTP/1.1 404 Not Found
+Content-Type: application/json
+{
+  "error": "error message string"
+}</pre>
+
+
+### Example:
+**Request:**
+```http
+GET /mood/stormy HTTP/1.1
+```
+**Response:** 
+```http 
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "health_tip": "Consider taking a short walk to improve your mood."
+}
+```
 
 ## UML Diagram
 ![UML Diagram](uml.png)
@@ -82,7 +108,7 @@ You can access the live API at [https://finkli.pythonanywhere.com/](https://fink
     ```bash
     pip install -r requirements.txt
 ## Usage (Local)
-1. **Install using installation instructions**
+1. **Install and activate virtual environment using installation instructions**
 2. **Run the Flask App:**
     ```bash
     flask --app app run

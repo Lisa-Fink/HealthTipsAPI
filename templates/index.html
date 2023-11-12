@@ -98,11 +98,21 @@
         <li>GET: <a href="/sleep-time/reduce">/sleep-time/reduce</a>
         </li>
     </ul>
-    <h3>Response Format</h3>
-    <pre>{"health_tip": string}</pre>
-    <h3>Error Response for invalid endpoint (Status: 404)</h3>
-    <pre>{"error": string}</pre>
 </ul>
-
+    <h3>Response Format</h3>
+    <pre>
+HTTP/1.1 200 OK
+Content-Type: application/json
+{
+  "health_tip": "health tip string"
+}
+    </pre>
+    <h3>Error Response for invalid endpoint</h3>
+    <pre>
+HTTP/1.1 404 Not Found
+Content-Type: application/json
+{
+  "error": "error message string"
+}</pre>
 </body>
 </html>
