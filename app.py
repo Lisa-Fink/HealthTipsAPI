@@ -3,6 +3,11 @@ from responses import *
 
 app = Flask(__name__)
 
+# handle 404 Not Found
+@app.errorhandler(404)
+def not_found_error(error):
+    return {"error": "Invalid endpoint"}, 404
+
 @app.route("/")
 def main():
     return render_template("index.html")
