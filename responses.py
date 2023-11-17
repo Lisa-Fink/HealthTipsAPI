@@ -1,3 +1,7 @@
+# Health Tips API Responses
+# Note: The following responses are provided by my partner who requires this
+# api to have specific requests and responses
+
 mood_responses = {
     "stormy":
 """Create a plan — A well-prepared plan for your family can help reduce anxiety and
