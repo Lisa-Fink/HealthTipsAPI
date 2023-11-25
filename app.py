@@ -1,8 +1,9 @@
 from flask import Flask, render_template
 from responses import *
+from flask_cors import CORS
 
 app = Flask(__name__)
-
+CORS(app)
 # handle 404 Not Found
 @app.errorhandler(404)
 def not_found_error(error):
