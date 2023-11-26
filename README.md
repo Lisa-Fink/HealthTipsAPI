@@ -2,7 +2,7 @@
 You can access the live API at [https://finkli.pythonanywhere.com/](https://finkli.pythonanywhere.com/).
 
 <h1>Health Tips API Documentation</h1>
-<a href="https://github.com/Lisa-Fink/HealthTipsAPI">Github</a>
+
 <p>This Flask REST API provides health tips based on different parameters like mood, temperature change, working out
     time, physical activity change, heart rate change, and sleep change.</p>
 
@@ -59,7 +59,7 @@ You can access the live API at [https://finkli.pythonanywhere.com/](https://fink
 HTTP/1.1 200 OK
 Content-Type: application/json
 {
-  "health_tip": "health tip string"
+  "health_tip": ["health tip string"]
 }
     </pre>
     <h3>Error Response for invalid endpoint</h3>
@@ -74,7 +74,7 @@ Content-Type: application/json
 ### Example:
 **Request:**
 ```http
-GET /mood/stormy HTTP/1.1
+GET /mood/anxiety HTTP/1.1
 ```
 **Response:** 
 ```http 
@@ -82,7 +82,10 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "health_tip": "Consider taking a short walk to improve your mood."
+  "health_tip": [
+    "Consider taking a short walk to improve your mood.",
+    "Use stress management and relaxation techniques."
+    ]
 }
 ```
 
